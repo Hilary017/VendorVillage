@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connect with local event vendors near you| Vendor Village</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div id="backdrop"></div>
+    <div class="modal card" id="add-modal">
+        <div class="form-intro">
+            <img src="/images/vendor-village.png" alt="a fine woman">
+            <div>
+                <h2 style="font-size: 30px;">Register with Vendor Village and</h2>
+                <p>Get local jobs from both local and the international community, Grow your business.</p>
+            </div>
+        </div>
+        <form id="register-form">
+            <div>
+                <label for="name">Business name/Full name <span style="color: red;">*</span></label> <br>
+                <input type="text" name="name" id="name" />
+            </div>
+            <div>
+                <label for="email">Email <span style="color: red;">*</span></label> <br>
+                <input type="email" name="email" id="email" />
+            </div>
+            <div>
+                <label for="number">Phone Number <span style="color: red;">*</span></label> <br>
+                <input type="number" min="1" name="number" id="number" />
+            </div>
+            <div>
+                <label for="services">which service are you providing <span style="color: red;">*</span></label>
+                <select name="services" id="">
+                    <option value="Photography">Photography</option>
+                    <option value="Fashion Design">Fashion Design</option>
+                </select>
+            </div>
+            <div>
+                <label for="bio">Bio<span style="color: red;">*</span></label> <br>
+                <textarea name="bio" id="bio" cols="50" rows="5"></textarea>
+                <p style="font-size: 10px; color: red; margin-top: 0;">not more than 100 words</p>
+            </div>
+            <div>
+                <label for="email">Profile picture</label> <br>
+                <input type="file" name="file" id="file" />
+            </div>
+            <div>
+                <label for="email">Portfolio images</label> <br>
+                <input type="file" name="file" id="file" />
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <input type="checkbox" /> 
+                <label for="email" style="font-size: 10px;">Yes, I'd like to receive email/SMS communications from Vendor Village.</label>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <input type="checkbox" /> 
+                <label for="email" style="font-size: 10px;">I accept <a href="#" style="color: blue;">terms and conditions</a>, <a href="#" style="color: blue;">privacy policy</a> and <a href="#" style="color: blue;">cookie policy</a></label>
+            </div>
+            <div>
+                <button id="cancel-btn" style="background-color: rgb(94, 94, 95);">Cancel</button>
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+    <header>
+        <nav>
+            <div style="display: flex; justify-content: space-between; padding: 0 20px;">
+                <a href="/" style="text-decoration: none;">
+                    <img src="./images/vendor-village.png" alt="logo" style="width: 100px;">
+                </a>
+                <button id="toggle-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <div class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li>
+                        <a href="/" style="text-decoration: none;">Home</a>
+                    </li>
+                    <li>
+                        <a href="/" style="text-decoration: none;">About</a>
+                    </li>
+                    <li>
+                        <a href="/" style="text-decoration: none;">Our Vendors</a>
+                    </li>
+                    <li>
+                        <a href="/">Contact Us</a>
+                    </li>
+                </ul>
+                <button id="register">Join as a vendor</button>
+            </div>
+            <div class="desktop-nav">
+                <ul>
+                    <li>
+                        <a href="/" style="text-decoration: none;">Home</a>
+                    </li>
+                    <li>
+                        <a href="/" style="text-decoration: none;">About</a>
+                    </li>
+                    <li>
+                        <a href="vendors.html" style="text-decoration: none;">Our Vendors</a>
+                    </li>
+                    <li>
+                        <a href="/">Contact Us</a>
+                    </li>
+                </ul>
+                <button id="desktop-register">Join as a vendor</button>
+            </div>
+        </nav>
+    </header>
+    <div class="discover-sect">
+        <div class="discover">
+            <div class="first-discover">
+                <h2>Discover and hire talented event professionals in Nigeria</h2>
+                <p>Vendor Village is an online market hub where event organizers can event service providers to hire for their events</p>
+                <button>Connect with a vendor</button>
+            </div>  
+            <div class="second-discover">
+                <img src="./images/marrige-pix.png" alt="a woman getting married">
+            </div>
+        </div>
+    </div>
+    <div class="find-vendors">
+        <div class="find-vendor">
+            <p>Find a trusted vendor within Nigeria from anywhere in the world. No middleman, no hidden charges.</p>
+            <h3>Absolutely free!</h3>
+        </div>
+    </div>
+    
+    <div class="our-platforms">
+        <div class="our-platform">
+            <h3>Our platform has registered event professionals in the field of</h3>
+            <div class="service-sect">
+                <button>
+                    Photography
+                </button>
+                <button>
+                    Decoration
+                </button>
+                <button>
+                    Cake Design
+                </button>
+                <button>
+                    Venue
+                </button>
+                <button>
+                    Makeup Art
+                </button>
+                <button>
+                    Bridal Gown
+                </button>
+                <button>
+                    Hair dressing
+                </button>
+                <button>
+                    DJ
+                </button>
+            </div>
+            <div class="our-services">
+                <h3>We have made our services as easy as...</h3>
+                <div class="easy-service">
+                    <div>
+                        <img src="./images/locate-vendor.png" style="margin-left: -10px; width: 120px;" alt="locate a vendor">
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="./images/view-vendor-profile.png" style="margin-left: 20px; width: 110px;" alt="book a vendor">
+                        <img src="./images/view-vendor-profile-text.png" alt="book a vendor" style="width: 120px;">
+                    </div>
+                    <div>
+                        <img src="/images/book-vendor.png" style="margin-left: -20px; margin-bottom: -50px; width: 120px;" alt="book a vendor">
+                        <img src="/images/book-a-vendor-text.png" style="width: 90px;" alt="book a vendor text">
+                    </div>
+                </div>
+            </div>
+            <div class="client-reviews">
+                <h3>What people are saying about vendor Village</h3>
+                <div class="client-review">
+                    <img src="/images/passport.png" alt="a passport of a traditional dressed lady">
+                    <div>
+                        <p>
+                            “ 
+                            this is perfection at its peak! your website is so 
+                            easy to use, contents are easily accessible. a big 
+                            well done!
+                            ”
+                        </p>
+                        <p style="font-weight: bolder;">*****</p>
+                        <p style="font-weight: bolder;">Chidi, Photographer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="week-events">
+            <div class="week-event">
+                <h3>Event of the week</h3>
+                <div class="love--stories">
+                    <img src="/images/passport.png" alt="a passport of a traditional dressed lady">
+                    <div class="love--story">
+                        <h4>Ivy and Ben love story</h4>
+                        <p>
+                            The city of lagos was thrown into frenzy last weekend as popular billionaire 
+                            and CEO of Devo music got married to his heathrob
+                        </p>
+                        <button>read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="help-locate--vendor">
+            <h3 style="font-weight: 700;">Let's help you locate the best event vendor near you</h3>
+            <button>Get started now!</button>
+        </div>
+        <footer>
+            <div class="contact-us">
+                <div>
+                    <img src="/images/vendor-village.png" alt="our logo">
+                    <h4>Find us on socials</h4>
+                    <div>
+                        <img src="images/faceb.png" alt="facebook icon">
+                        <img src="images/instagram.png" alt="instagram icon">
+                        <img src="images/whatsapp.png" alt="WhatsApp icon">
+                    </div>
+                </div>
+                <div class="our-address">
+                    <p><span style="font-weight: bold;">Contact us@ </span>112 Allen Avenue road, Ikeja, Lagos, Nigeria</p>
+                    <p>Site map</p>
+                    <p>Accessibility statement</p>
+                    <p>Website privacy statement</p>
+                </div>
+            </div>
+            <p class="copyright">copyright&copy;Vendorvillage</p>
+        </footer>
+    </div>
+</body>
+</html>
