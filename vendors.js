@@ -104,16 +104,40 @@ const loadVendorList = (filterValue = "") => {
         `
         vendors.append(newVendor);
 
-        detailsBtn = newVendor.querySelectorAll("button");
+        
     }
 
-    console.log(detailsBtn)
+    // detailsBtn = vendors.querySelectorAll("button");
 
-    const alert = () => {
-        alert("okay")
-    }
+    // console.log(detailsBtn)
 
-    // detailsBtn.addEventListener("click", alert)
+    // let button;
+
+    // const viewProfile = (id) => {
+    //     for(const btn of detailsBtn) {
+    //         button = btn;
+    //         console.log(btn, button);
+    //         // vendorList.filter(vendor => vendor.id === id);
+    //     }
+    // }
+
+    // viewProfile();
+    // console.log(button)
+
+    
+    
+
+    // for(const btn of detailsBtn) {
+    //     const alert = () => {
+    //         alert("okay")
+    //     }
+    //     console.log(btn)
+    //     console.log(btn.value )
+    
+    //     btn.addEventListener("click", alert)
+    // }
+
+    
 
     if(filteredVendors.length < 1) {
         vendors.innerHTML = `
@@ -194,4 +218,4 @@ markupArt.addEventListener("click", filterMovieHandler.bind(null, "makeup Art"))
 bridal.addEventListener("click", filterMovieHandler.bind(null, "bridal gown"));
 hairDressing.addEventListener("click", filterMovieHandler.bind(null, "hair dressing"));
 dj.addEventListener("click", filterMovieHandler.bind(null, "dj"));
-allVendors.addEventListener("click", searchMovieHandler);
+allVendors.addEventListener("click", loadVendorList.bind(null, ""));
