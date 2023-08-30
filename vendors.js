@@ -12,15 +12,15 @@ const vendors = document.getElementById("vendors-container");
 const searchBar = document.querySelector(".search_field");
 const searchBtn = document.querySelector(".search-btn");
 
-// const photography = document.querySelector(".photography"); 
-// const allVendors = photography.previousElementSibling;
-// const decoration = photography.nextElementSibling; 
-// const cakeDesign = decoration.nextElementSibling; 
-// const venue = cakeDesign.nextElementSibling; 
-// const markupArt = venue.nextElementSibling; 
-// const bridal = markupArt.nextElementSibling; 
-// const hairDressing = bridal.nextElementSibling; 
-// const dj = hairDressing.nextElementSibling; 
+const photography = document.querySelector(".photography"); 
+const allVendors = photography.previousElementSibling;
+const decoration = photography.nextElementSibling; 
+const cakeDesign = decoration.nextElementSibling; 
+const venue = cakeDesign.nextElementSibling; 
+const markupArt = venue.nextElementSibling; 
+const bridal = markupArt.nextElementSibling; 
+const hairDressing = bridal.nextElementSibling; 
+const dj = hairDressing.nextElementSibling; 
 
 let active;
 
@@ -76,7 +76,66 @@ const vendorList = [
     },
 ] 
 
+const loadVendorList = (filterValue = "") => {
+    vendors.innerHTML = "";
 
+    const filteredVendors = !filterValue ? vendorList : vendorList.filter(vendor => {
+       return vendor.businessName.toLowerCase().includes(filterValue) ||
+             vendor.service.toLowerCase().includes(filterValue) ||
+             vendor.phoneNumber.includes(filterValue)
+    }) 
+
+    let newVendor;
+    let detailsBtn
+    for(const vendor of filteredVendors) {
+        newVendor = document.createElement("div");
+        newVendor.className = "cartitem__div";
+        newVendor.innerHTML = `
+            <img src="/images/cake.jpg" alt=${vendor.businessName} class="cartitem_img"} />
+            <div class="movie__actions">
+                <div style="padding: 0 0.5rem;">
+                    <h3>Name: <span>${vendor.businessName}</span></h3>
+                    <h3>Service/Industry: <span>${vendor.service}</span></h3>
+                </div>
+            </div>
+            <div class="details_btn">
+                <button value=${vendor.id}>View Profile</button>
+            </div>
+        `
+        vendors.append(newVendor);
+
+        detailsBtn = newVendor.querySelectorAll("button");
+    }
+
+    console.log(detailsBtn)
+
+    const alert = () => {
+        alert("okay")
+    }
+
+    // detailsBtn.addEventListener("click", alert)
+
+    if(filteredVendors.length < 1) {
+        vendors.innerHTML = `
+            <div style="text-align: center;">
+                <h3>No Results</h3>
+                <p>Sorry! no result was found for this page/search.</p>
+            </div>
+        `
+    }
+    
+    
+    // for(const button of vendorsBtn) {
+    //     const singleMovie = vendorList.filter(vendor => {
+    //         return vendor.id === button.value
+    //     })
+
+    //     console.log(singleMovie);
+    //     // console.log(button.value)
+
+    //     button.addEventListener("click", () => alert("clicked!"))
+    // }
+}
 
 
 
@@ -120,9 +179,19 @@ const filterMovieHandler = (value) => {
     active = value;
 }
 
+loadVendorList();
 toggleButton.addEventListener("click", toggleNavbar);
 registerVendorButton.addEventListener("click", showRegistrationModal);
 desktopRegisterVendorButton.addEventListener("click", showDesktopRegistrationModal);
 backdrop.addEventListener("click", closeRegistrationModal);
 cancelRegisterModal.addEventListener("click", closeRegistrationModal);
-
+searchBtn.addEventListener("click", searchMovieHandler);
+photography.addEventListener("click", filterMovieHandler.bind(null, "photography"));
+decoration.addEventListener("click", filterMovieHandler.bind(null, "decoration"));
+cakeDesign.addEventListener("click", filterMovieHandler.bind(null, "cake design"));
+venue.addEventListener("click", filterMovieHandler.bind(null, "venue"));
+markupArt.addEventListener("click", filterMovieHandler.bind(null, "makeup Art"));
+bridal.addEventListener("click", filterMovieHandler.bind(null, "bridal gown"));
+hairDressing.addEventListener("click", filterMovieHandler.bind(null, "hair dressing"));
+dj.addEventListener("click", filterMovieHandler.bind(null, "dj"));
+allVendors.addEventListener("click", searchMovieHandler);
