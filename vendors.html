@@ -7,23 +7,34 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="vendorprofile.css">
-    <script src="app.js" defer></script>
 </head>
-    <body>
+    <body> 
         <header>
             <nav>
-                <div style="display: flex; justify-content: space-between; padding: 0 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
                     <a href="/" style="text-decoration: none;">
                         <img src="./images/vendor-village.png" alt="logo" style="width: 100px;">
                     </a>
-                    <button id="toggle-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                    <div class="toggle-wrapper">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="20"         
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        <button id="toggle-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="mobile-search_bar">
+                        <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
+                        <button class="search-btn">
+                            <a href="vendors.html" style="text-decoration: none; color: white;">
+                                search
+                            </a>
+                        </button>
+                    </div>
                 </div>
-                
                 <div class="mobile-nav" id="mobile-nav">
                     <ul>
                         <li>
@@ -36,7 +47,7 @@
                             <a href="vendors.html" style="text-decoration: none;">Our Vendors</a>
                         </li>
                         <li>
-                            <a href="/">Contact Us</a>
+                            <a href="#contact" id="contact-us">Contact Us</a>
                         </li>
                     </ul>
                     <button id="register">
@@ -46,6 +57,14 @@
                     </button>
                 </div>
                 <div class="desktop-nav">
+                    <div class="search_bar">
+                        <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
+                        <button class="search-btn">
+                            <a href="vendors.html" style="text-decoration: none; color: white;">
+                                search
+                            </a>
+                        </button>
+                    </div>
                     <ul>
                         <li>
                             <a href="/" style="text-decoration: none;">Home</a>
@@ -57,7 +76,7 @@
                             <a href="vendors.html" style="text-decoration: none;">Our Vendors</a>
                         </li>
                         <li>
-                            <a href="/">Contact Us</a>
+                            <a href="#contact">Contact Us</a>
                         </li>
                     </ul>
                     <button id="register">
@@ -68,109 +87,125 @@
                 </div>
             </nav>
         </header>
-        <div class="vendor-intro" style="margin-top: 4rem;">
-            <h1>Find the best event vendor hservices for your event</h1>
-            <p>View their profile and hire them directly. No middleman!</p>
-        </div>
-        <div class="filter--vendor">
-            <select name="" id="">
-                <option value="" selected disabled>which service are you searching for</option>
-            </select>
-            <select name="" id="">
-                <option value="" selected disabled>which city</option>
-            </select>
-            <button class="search-btn">
-                <a href="vendorprofile.html" style="text-decoration: none; color: white;">
-                    search
-                </a>
-            </button>
-        </div>
-        <div class="our-platform" style="margin-bottom: 5rem; margin-top: 1rem;">
-            <h3>You can also find a vendor by selecting from one of these categories below</h3>
-            <div class="service-sect">
+        <main>
+            <div class="vendor-intro">
+                <h1>Find the best event vendor hservices for your event</h1>
+                <p>View their profile and hire them directly. No middleman!</p>
+            </div>
+            <div class="filter--vendor">
+                <select name="" id="">
+                    <option value="" selected disabled>which service are you searching for</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Decoration">Decoration</option>
+                    <option value="Cake Design">Cake Design</option>
+                    <option value="Venue">Venue</option>
+                    <option value="Makeup Art">Makeup Art</option>
+                    <option value="Bridal Gown">Bridal Gown</option>
+                    <option value="Hair dressing">Hair dressing</option>
+                    <option value="DJ">DJ</option>
+                </select>
+                <select name="" id="">
+                    <option value="" selected disabled>which city</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Abuja">Abuja</option>
+                    <option value="Port Harcourt">Port Harcourt</option>
+                </select>
                 <button>
-                    Photography
-                </button>
-                <button>
-                    Decoration
-                </button>
-                <button>
-                    Cake Design
-                </button>
-                <button>
-                    Venue
-                </button>
-                <button>
-                    Makeup Art
-                </button>
-                <button>
-                    Bridal Gown
-                </button>
-                <button>
-                    Hair dressing
-                </button>
-                <button>
-                    DJ
+                    <a href="vendorprofile.html" style="text-decoration: none; color: white;">
+                        search
+                    </a>
                 </button>
             </div>
-        </div>
-        <div class="vendor-sect">
-            <img src="./images/marrige-pix.png" alt="A woman getting married">
-            <img src="./images/marrige-pix.png" alt="A woman getting married">
-            <img src="./images/marrige-pix.png" alt="A woman getting married">
-            <img src="./images/marrige-pix.png" alt="A woman getting married">
-            <img src="./images/marrige-pix.png" alt="A woman getting married">
-            <img src="./images/marrige-pix.png" alt="A woman getting married">
-        </div>
-        <div style="margin-top: 64px;">
-            <div class="popular--vendors" style="max-width: 940px; margin: 0 auto;">
-                <h3>Popular Vendors</h3>
+            <div class="our-platform" style="margin-bottom: 5rem; margin-top: 1rem;">
+                <h3>You can also find a vendor by selecting from one of these categories below</h3>
+                <ul class="service-sect">
+                    <li>
+                        Photography
+                    </li>
+                    <li>
+                        Decoration
+                    </li>
+                    <li>
+                        Cake Design
+                    </li>
+                    <li>
+                        Venue
+                    </li>
+                    <li>
+                        Makeup Art
+                    </li>
+                    <li>
+                        Bridal Gown
+                    </li>
+                    <li>
+                        Hair dressing
+                    </li>
+                    <li>
+                        DJ
+                    </li>
+                </ul>
             </div>
-            
-            <div class="profile-sect">
-                <div class="vendor-profile">
+            <ul>
+                <li>
                     <img src="./images/marrige-pix.png" alt="A woman getting married">
-                    <div>
-                        <h3>TG Bakery</h3>
-                        <p>Cake designer</p>
-                        <p>Lagos state</p>
-                    </div>
-                    <button class="search-btn" style="background-color: rgba(10, 134, 248, 1); color: white; position: absolute; right: 10px; border-radius: 5px; border: none; padding: 0.5rem; bottom: 10px;">
-                        <a href="vendorprofile.html" style="text-decoration: none; color: white;">
-                            view profile
-                        </a>
-                    </button>
-                </div>
-                <div class="vendor-profile">
+                </li>
+                <li>
                     <img src="./images/marrige-pix.png" alt="A woman getting married">
-                    <div>
-                        <h3>TG Bakery</h3>
-                        <p>Cake designer</p>
-                        <p>Lagos state</p>
-                    </div>
-                    <button class="search-btn" style="background-color: rgba(10, 134, 248, 1); color: white; position: absolute; right: 10px; border-radius: 5px; border: none; padding: 0.5rem; bottom: 10px;">
-                        <a href="vendorprofile.html" style="text-decoration: none; color: white;">
-                            view profile
-                        </a>
-                    </button>
-                </div>
-                <div class="vendor-profile">
+                </li>
+                <li>
                     <img src="./images/marrige-pix.png" alt="A woman getting married">
-                    <div>
-                        <h3>TG Bakery</h3>
-                        <p>Cake designer</p>
-                        <p>Lagos state</p>
+                </li>
+                <li>
+                    <img src="./images/marrige-pix.png" alt="A woman getting married">
+                </li>
+                <li>
+                    <img src="./images/marrige-pix.png" alt="A woman getting married">
+                </li>
+            </ul>
+            <div class="popular-vendors">
+                <h2>Popular Vendors</h2>
+                <div class="profile-sect">
+                    <div class="vendor-profile">
+                        <img src="./images/marrige-pix.png" alt="A woman getting married">
+                        <div>
+                            <h3>TG Bakery</h3>
+                            <p>Cake designer</p>
+                            <p>Lagos state</p>
+                        </div>
+                        <button>
+                            <a href="vendorprofile.html">
+                                view profile
+                            </a>
+                        </button>
                     </div>
-                    <button class="search-btn" style="background-color: rgba(10, 134, 248, 1); color: white; position: absolute; right: 10px; border-radius: 5px; border: none; padding: 0.5rem; bottom: 10px;">
-                        <a href="vendorprofile.html" style="text-decoration: none; color: white;">
-                            view profile
-                        </a>
-                    </button>
+                    <div class="vendor-profile">
+                        <img src="./images/marrige-pix.png" alt="A woman getting married">
+                        <div>
+                            <h3>TG Bakery</h3>
+                            <p>Cake designer</p>
+                            <p>Lagos state</p>
+                        </div>
+                        <button>
+                            <a href="vendorprofile.html">
+                                view profile
+                            </a>
+                        </button>
+                    </div>
+                    <div class="vendor-profile">
+                        <img src="./images/marrige-pix.png" alt="A woman getting married">
+                        <div>
+                            <h3>TG Bakery</h3>
+                            <p>Cake designer</p>
+                            <p>Lagos state</p>
+                        </div>
+                        <button>
+                            <a href="vendorprofile.html">
+                                view profile
+                            </a>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="our-platforms">
-            
             <div class="week-events">
                 <div class="week-event">
                     <h3>Event of the week</h3>
@@ -187,26 +222,27 @@
                     </div>
                 </div>
             </div>
-            <footer>
-                <div class="contact-us">
+        </main>
+        <footer id="contact">
+            <div class="footer-sect">
+                <div>
+                    <img src="/images/vendor-village.png" alt="our logo">
+                    <h4>Find us on socials</h4>
                     <div>
-                        <img src="/images/vendor-village.png" alt="our logo">
-                        <h4>Find us on socials</h4>
-                        <div>
-                            <img src="images/faceb.png" alt="facebook icon">
-                            <img src="images/instagram.png" alt="instagram icon">
-                            <img src="images/whatsapp.png" alt="WhatsApp icon">
-                        </div>
-                    </div>
-                    <div class="our-address">
-                        <p><span style="font-weight: bold;">Contact us@ </span>112 Allen Avenue road, Ikeja, Lagos, Nigeria</p>
-                        <p>Site map</p>
-                        <p>Accessibility statement</p>
-                        <p>Website privacy statement</p>
+                        <img src="images/faceb.png" alt="facebook icon">
+                        <img src="images/instagram.png" alt="instagram icon">
+                        <img src="images/whatsapp.png" alt="WhatsApp icon">
                     </div>
                 </div>
-                <p class="copyright">copyright&copy;Vendorvillage</p>
-            </footer>
-        </div>
+                <div class="our-address">
+                    <address><span style="font-weight: bold;">Contact us@ </span>112 Allen Avenue road, Ikeja, Lagos, Nigeria</address>
+                    <p>Site map</p>
+                    <p>Accessibility statement</p>
+                    <p>Website privacy statement</p>
+                </div>
+            </div>
+            <p class="copyright">copyright&copy;Vendorvillage</p>
+        </footer>
+        <script src="app.js"></script>
     </body>
 </html>

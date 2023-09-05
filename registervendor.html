@@ -5,26 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>connect with local event vendors near you| Vendor Village</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="vendor.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
     <script src="app.js" defer></script>
 </head>
 <body>
-    <div id="backdrop"></div>
-
     <header>
         <nav>
-            <div style="display: flex; justify-content: space-between; padding: 0 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
                 <a href="/" style="text-decoration: none;">
                     <img src="./images/vendor-village.png" alt="logo" style="width: 100px;">
                 </a>
-                <button id="toggle-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="toggle-wrapper">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="20"         
+                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                    <button id="toggle-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="mobile-search_bar">
+                    <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
+                    <button class="search-btn">
+                        <a href="vendors.html" style="text-decoration: none; color: white;">
+                            search
+                        </a>
+                    </button>
+                </div>
             </div>
+            
             <div class="mobile-nav" id="mobile-nav">
                 <ul>
                     <li>
@@ -37,22 +49,17 @@
                         <a href="vendors.html" style="text-decoration: none;">Our Vendors</a>
                     </li>
                     <li>
-                        <a href="/">Contact Us</a>
+                        <a href="#contact" id="contact-us">Contact Us</a>
                     </li>
                 </ul>
                 <button id="register">
-                    <a href="registervendor.html">
+                    <a href="registervendor.html" style="text-decoration: none; color: white;">
                         Join as a vendor
                     </a>
                 </button>
             </div>
             <div class="desktop-nav">
                 <div class="search_bar">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="36" height="16" 
-                            
-                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg> -->
                     <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
                     <button class="search-btn">
                         <a href="vendors.html" style="text-decoration: none; color: white;">
@@ -71,15 +78,20 @@
                         <a href="vendors.html" style="text-decoration: none;">Our Vendors</a>
                     </li>
                     <li>
-                        <a href="/">Contact Us</a>
+                        <a href="#contact">Contact Us</a>
                     </li>
                 </ul>
-                <button id="desktop-register">Join as a vendor</button>
+                <button id="register">
+                    <a href="registervendor.html" style="text-decoration: none; color: white;">
+                        Join as a vendor
+                    </a>
+                </button>
             </div>
         </nav>
     </header>
+
     <main>
-        <div class="modal card" id="add-modal">
+        <div class="card">
             <div class="form-intro">
                 <img src="/images/vendor-village.png" alt="a fine woman">
                 <div>
@@ -97,12 +109,13 @@
                     <input type="email" name="email" id="email" />
                 </div>
                 <div>
-                    <label for="number">Phone Number <span style="color: red;">*</span></label> <br>
-                    <input type="number" min="1" name="number" id="number" />
+                    <label for="phone">Phone Number <span style="color: red;">*</span></label> <br>
+                    <input type="number" min="1" name="number" id="phone" />
                 </div>
                 <div>
                     <label for="services">which service are you providing <span style="color: red;">*</span></label>
-                    <select name="services" id="">
+                    <select name="services" id="services">
+                        <option selected value="" disabled>Select Services</option>
                         <option value="Photography">Photography</option>
                         <option value="Fashion Design">Fashion Design</option>
                     </select>
@@ -121,11 +134,11 @@
                     <input type="file" name="file" id="file" />
                 </div>
                 <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                    <input type="checkbox" /> 
+                    <input type="checkbox" id="subcription" /> 
                     <label for="email" style="font-size: 10px;">Yes, I'd like to receive email/SMS communications from Vendor Village.</label>
                 </div>
                 <div style="display: flex; align-items: center;">
-                    <input type="checkbox" /> 
+                    <input type="checkbox" id="terms" /> 
                     <label for="email" style="font-size: 10px;">I accept <a href="#" style="color: blue;">terms and conditions</a>, <a href="#" style="color: blue;">privacy policy</a> and <a href="#" style="color: blue;">cookie policy</a></label>
                 </div>
                 <div>
@@ -135,8 +148,8 @@
             </form>
         </div>
     </main>
-    <footer>
-        <div class="contact-us">
+    <footer id="contact">
+        <div class="footer-sect">
             <div>
                 <img src="/images/vendor-village.png" alt="our logo">
                 <h4>Find us on socials</h4>
@@ -147,7 +160,7 @@
                 </div>
             </div>
             <div class="our-address">
-                <p><span style="font-weight: bold;">Contact us@ </span>112 Allen Avenue road, Ikeja, Lagos, Nigeria</p>
+                <address><span style="font-weight: bold;">Contact us@ </span>112 Allen Avenue road, Ikeja, Lagos, Nigeria</address>
                 <p>Site map</p>
                 <p>Accessibility statement</p>
                 <p>Website privacy statement</p>

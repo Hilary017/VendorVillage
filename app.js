@@ -3,26 +3,24 @@ const registerVendorButton = document.getElementById("register");
 const desktopRegisterVendorButton = document.getElementById("desktop-register");
 const backdrop = document.querySelector("#backdrop");
 const registerModal = document.querySelector("#add-modal");
-const cancelRegisterModal = document.querySelector("#cancel-btn");
+
 const mobileNav = document.getElementById("mobile-nav");
 const firstToggle = toggleButton.querySelector("span");
 const secondToggle = toggleButton.children[1];
 const thirdToggle = toggleButton.children[2];
-const vendors = document.getElementById("vendors-container");
 const searchBar = document.querySelector(".search_field");
 const searchBtn = document.querySelector(".search-btn");
 
-// const photography = document.querySelector(".photography"); 
-// const allVendors = photography.previousElementSibling;
-// const decoration = photography.nextElementSibling; 
-// const cakeDesign = decoration.nextElementSibling; 
-// const venue = cakeDesign.nextElementSibling; 
-// const markupArt = venue.nextElementSibling; 
-// const bridal = markupArt.nextElementSibling; 
-// const hairDressing = bridal.nextElementSibling; 
-// const dj = hairDressing.nextElementSibling; 
+const navBar = document.querySelector("nav");
+const searchIcon = document.querySelector("svg");
+const toggleBar = document.querySelector(".toggle-wrapper");
+const mobileSearchBar = document.querySelector(".mobile-search_bar");
+const searchField = mobileSearchBar.querySelector("input");
 
-let active;
+const contactUs = document.getElementById("contact-us");
+
+console.log(contactUs);
+
 
 
 const vendorList = [
@@ -80,6 +78,16 @@ const vendorList = [
 
 
 
+const appearSearchButton = () => {
+    toggleBar.classList.toggle("disappear");
+    mobileSearchBar.classList.toggle("mobile-appear");
+}
+
+const disappearSearchButton = () => {
+    toggleBar.classList.toggle("disappear");
+    mobileSearchBar.classList.toggle("mobile-appear");
+}
+
 const toggleNavbar = () => {
     mobileNav.classList.toggle("active");
     firstToggle.classList.toggle("top_true")
@@ -120,9 +128,14 @@ const filterMovieHandler = (value) => {
     active = value;
 }
 
+
+
 toggleButton.addEventListener("click", toggleNavbar);
 registerVendorButton.addEventListener("click", showRegistrationModal);
-desktopRegisterVendorButton.addEventListener("click", showDesktopRegistrationModal);
-backdrop.addEventListener("click", closeRegistrationModal);
-cancelRegisterModal.addEventListener("click", closeRegistrationModal);
-
+// desktopRegisterVendorButton.addEventListener("click", showDesktopRegistrationModal);
+// backdrop.addEventListener("click", closeRegistrationModal);
+// cancelRegisterModal.addEventListener("click", closeRegistrationModal);
+searchIcon.addEventListener("click", appearSearchButton);
+navBar.addEventListener("blur", disappearSearchButton);
+searchField.addEventListener("blur", disappearSearchButton);
+contactUs.addEventListener("click", toggleNavbar)

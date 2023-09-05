@@ -5,23 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>connect with local event vendors near you| Vendor Village</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="vendor.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
     <script src="app.js" defer></script>
+    <script src="vendors.js" defer></script>
 </head>
 <body>   
     <header>
         <nav>
-            <div style="display: flex; justify-content: space-between; padding: 0 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
                 <a href="/" style="text-decoration: none;">
                     <img src="./images/vendor-village.png" alt="logo" style="width: 100px;">
                 </a>
-                <button id="toggle-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="toggle-wrapper">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="20"         
+                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                    <button id="toggle-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="mobile-search_bar">
+                    <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
+                    <button class="search-btn">
+                        <a href="vendors.html" style="text-decoration: none; color: white;">
+                            search
+                        </a>
+                    </button>
+                </div>
             </div>
             
             <div class="mobile-nav" id="mobile-nav">
@@ -36,7 +50,7 @@
                         <a href="vendors.html" style="text-decoration: none;">Our Vendors</a>
                     </li>
                     <li>
-                        <a href="/">Contact Us</a>
+                        <a href="#contact" id="contact-us">Contact Us</a>
                     </li>
                 </ul>
                 <button id="register">
@@ -47,11 +61,6 @@
             </div>
             <div class="desktop-nav">
                 <div class="search_bar">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="36" height="16" 
-                            
-                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg> -->
                     <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
                     <button class="search-btn">
                         <a href="vendors.html" style="text-decoration: none; color: white;">
@@ -70,7 +79,7 @@
                         <a href="vendors.html" style="text-decoration: none;">Our Vendors</a>
                     </li>
                     <li>
-                        <a href="/">Contact Us</a>
+                        <a href="#contact">Contact Us</a>
                     </li>
                 </ul>
                 <button id="register">
@@ -81,132 +90,221 @@
             </div>
         </nav>
     </header>
-    <div class="discover-sect">
-        <div class="discover">
-            <div class="first-discover">
-                <h2>Discover and hire talented event professionals in Nigeria</h2>
-                <p>Vendor Village is an online market hub where event organizers can event service providers to hire for their events</p>
+    <main>
+        <div class="discover-sect">
+            <div class="discover">
+                <div class="first-discover">
+                    <h2>Discover and hire talented event professionals in Nigeria</h2>
+                    <p>Vendor Village is an online market hub where event organizers can event service providers to hire for their events</p>
+                    <button>
+                        <a href="vendors.html" style="text-decoration: none; color: white;">
+                            Connect with a vendor
+                        </a>
+                    </button>
+                </div>  
+                <div>
+                    <img src="./images/marrige-pix.png" alt="a woman getting married">
+                </div>
+            </div>
+        </div>
+        <div class="find-vendors">
+            <div>
+                <p>Find a trusted vendor within Nigeria from anywhere in the world. No middleman, no hidden charges.</p>
+                <h3>Absolutely free!</h3>
+            </div>
+        </div>
+        <div>
+            <div class="our-platform">
+                <h3>Our platform has registered event professionals in the field of</h3>
+                    <ul>
+                        <li>
+                            Photography
+                        </li>
+                        <li>
+                            Decoration
+                        </li>
+                        <li>
+                            Cake Design
+                        </li>
+                        <li>
+                            Venue
+                        </li>
+                        <li>
+                            Makeup Art
+                        </li>
+                        <li>
+                            Bridal Gown
+                        </li>
+                        <li>
+                            Hair dressing
+                        </li>
+                        <li>
+                            DJ
+                        </li>
+                    </ul>
+                <div class="our-services">
+                    <h3>We have made our services as easy as...</h3>
+                    <div class="easy-service">
+                        <div>
+                            <img src="./images/locate-vendor.png" style="margin-left: -10px; width: 120px;" alt="locate a vendor">
+                        </div>
+                        <div style="text-align: center;">
+                            <img src="./images/view-vendor-profile.png" style="margin-left: 20px; width: 110px;" alt="book a vendor">
+                            <img src="./images/view-vendor-profile-text.png" alt="book a vendor" style="width: 120px;">
+                        </div>
+                        <div>
+                            <img src="/images/book-vendor.png" style="margin-left: -20px; margin-bottom: -50px; width: 120px;" alt="book a vendor">
+                            <img src="/images/book-a-vendor-text.png" style="width: 90px;" alt="book a vendor text">
+                        </div>
+                    </div>
+                </div>
+                <div class="client-reviews">
+                    <h3>What people are saying about vendor Village</h3>
+                    <div class="slider">
+                        <div class="list">
+                            <div class="item">
+                                <div class="client-review">
+                                    <img src="/images/passport.png" alt="a passport of a traditional dressed lady">
+                                    <div>
+                                        <p>
+                                            “ 
+                                            this is perfection at its peak! your website is so 
+                                            easy to use, contents are easily accessible. a big 
+                                            well done!
+                                            ”
+                                        </p>
+                                        <p style="font-weight: bolder;">*****</p>
+                                        <p style="font-weight: bolder;">Chidi, Photographer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <!-- <img src="images/vendor-village.png" alt=""> -->
+                                <div class="client-review">
+                                    <img src="/images/passport.png" alt="a passport of a traditional dressed lady">
+                                    <div>
+                                        <p>
+                                            “ 
+                                            this is perfection at its peak! your website is so 
+                                            easy to use, contents are easily accessible. a big 
+                                            well done!
+                                            ”
+                                        </p>
+                                        <p style="font-weight: bolder;">*****</p>
+                                        <p style="font-weight: bolder;">Chidi, Photographer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <!-- <img src="images/passport.png" alt=""> -->
+                                <div class="client-review">
+                                    <img src="/images/passport.png" alt="a passport of a traditional dressed lady">
+                                    <div>
+                                        <p>
+                                            “ 
+                                            this is perfection at its peak! your website is so 
+                                            easy to use, contents are easily accessible. a big 
+                                            well done!
+                                            ”
+                                        </p>
+                                        <p style="font-weight: bolder;">*****</p>
+                                        <p style="font-weight: bolder;">Chidi, Photographer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <!-- <img src="images/cake.jpg" alt=""> -->
+                                <div class="client-review">
+                                    <img src="/images/passport.png" alt="a passport of a traditional dressed lady">
+                                    <div>
+                                        <p>
+                                            “ 
+                                            this is perfection at its peak! your website is so 
+                                            easy to use, contents are easily accessible. a big 
+                                            well done!
+                                            ”
+                                        </p>
+                                        <p style="font-weight: bolder;">*****</p>
+                                        <p style="font-weight: bolder;">Chidi, Photographer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="client-review">
+                                    <img src="/images/passport.png" alt="a passport of a traditional dressed lady">
+                                    <div>
+                                        <p>
+                                            “ 
+                                            this is perfection at its peak! your website is so 
+                                            easy to use, contents are easily accessible. a big 
+                                            well done!
+                                            ”
+                                        </p>
+                                        <p style="font-weight: bolder;">*****</p>
+                                        <p style="font-weight: bolder;">Chidi, Photographer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button id="prev"><</button>
+                            <button id="next">></button>
+                        </div>
+                        <ul class="dots">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="week-events">
+                <div class="week-event">
+                    <h3>Event of the week</h3>
+                    <div class="love--stories">
+                        <img src="/images/passport.png" alt="a passport of a traditional dressed lady">
+                        <div class="love--story">
+                            <h4>Ivy and Ben love story</h4>
+                            <p>
+                                The city of lagos was thrown into frenzy last weekend as popular billionaire 
+                                and CEO of Devo music got married to his heathrob
+                            </p>
+                            <button>read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help-locate--vendor">
+                <h3>Let's help you locate the best event vendor near you</h3>
                 <button>
                     <a href="vendors.html" style="text-decoration: none; color: white;">
-                        Connect with a vendor
+                        Get started now!
                     </a>
                 </button>
-            </div>  
-            <div class="second-discover">
-                <img src="./images/marrige-pix.png" alt="a woman getting married">
             </div>
-        </div>
-    </div>
-    <div class="find-vendors">
-        <div class="find-vendor">
-            <p>Find a trusted vendor within Nigeria from anywhere in the world. No middleman, no hidden charges.</p>
-            <h3>Absolutely free!</h3>
-        </div>
-    </div>
-    
-    <div class="our-platforms">
-        <div class="our-platform">
-            <h3>Our platform has registered event professionals in the field of</h3>
-            <div class="service-sect">
-                <button>
-                    Photography
-                </button>
-                <button>
-                    Decoration
-                </button>
-                <button>
-                    Cake Design
-                </button>
-                <button>
-                    Venue
-                </button>
-                <button>
-                    Makeup Art
-                </button>
-                <button>
-                    Bridal Gown
-                </button>
-                <button>
-                    Hair dressing
-                </button>
-                <button>
-                    DJ
-                </button>
-            </div>
-            <div class="our-services">
-                <h3>We have made our services as easy as...</h3>
-                <div class="easy-service">
-                    <div>
-                        <img src="./images/locate-vendor.png" style="margin-left: -10px; width: 120px;" alt="locate a vendor">
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="./images/view-vendor-profile.png" style="margin-left: 20px; width: 110px;" alt="book a vendor">
-                        <img src="./images/view-vendor-profile-text.png" alt="book a vendor" style="width: 120px;">
-                    </div>
-                    <div>
-                        <img src="/images/book-vendor.png" style="margin-left: -20px; margin-bottom: -50px; width: 120px;" alt="book a vendor">
-                        <img src="/images/book-a-vendor-text.png" style="width: 90px;" alt="book a vendor text">
-                    </div>
-                </div>
-            </div>
-            <div class="client-reviews">
-                <h3>What people are saying about vendor Village</h3>
-                <div class="client-review">
-                    <img src="/images/passport.png" alt="a passport of a traditional dressed lady">
-                    <div>
-                        <p>
-                            “ 
-                            this is perfection at its peak! your website is so 
-                            easy to use, contents are easily accessible. a big 
-                            well done!
-                            ”
-                        </p>
-                        <p style="font-weight: bolder;">*****</p>
-                        <p style="font-weight: bolder;">Chidi, Photographer</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="week-events">
-            <div class="week-event">
-                <h3>Event of the week</h3>
-                <div class="love--stories">
-                    <img src="/images/passport.png" alt="a passport of a traditional dressed lady">
-                    <div class="love--story">
-                        <h4>Ivy and Ben love story</h4>
-                        <p>
-                            The city of lagos was thrown into frenzy last weekend as popular billionaire 
-                            and CEO of Devo music got married to his heathrob
-                        </p>
-                        <button>read more</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="help-locate--vendor">
-            <h3 style="font-weight: 700;">Let's help you locate the best event vendor near you</h3>
-            <button>Get started now!</button>
-        </div>
-        <footer>
-            <div class="contact-us">
+        </div>   
+    </main>
+    <footer id="contact">
+        <div class="footer-sect">
+            <div>
+                <img src="/images/vendor-village.png" alt="our logo">
+                <h4>Find us on socials</h4>
                 <div>
-                    <img src="/images/vendor-village.png" alt="our logo">
-                    <h4>Find us on socials</h4>
-                    <div>
-                        <img src="images/faceb.png" alt="facebook icon">
-                        <img src="images/instagram.png" alt="instagram icon">
-                        <img src="images/whatsapp.png" alt="WhatsApp icon">
-                    </div>
-                </div>
-                <div class="our-address">
-                    <p><span style="font-weight: bold;">Contact us@ </span>112 Allen Avenue road, Ikeja, Lagos, Nigeria</p>
-                    <p>Site map</p>
-                    <p>Accessibility statement</p>
-                    <p>Website privacy statement</p>
+                    <img src="images/faceb.png" alt="facebook icon">
+                    <img src="images/instagram.png" alt="instagram icon">
+                    <img src="images/whatsapp.png" alt="WhatsApp icon">
                 </div>
             </div>
-            <p class="copyright">copyright&copy;Vendorvillage</p>
-        </footer>
-    </div>
+            <div class="our-address">
+                <address><span style="font-weight: bold;">Contact us@ </span>112 Allen Avenue road, Ikeja, Lagos, Nigeria</address>
+                <p>Site map</p>
+                <p>Accessibility statement</p>
+                <p>Website privacy statement</p>
+            </div>
+        </div>
+        <p class="copyright">copyright&copy;Vendorvillage</p>
+    </footer>
 </body>
 </html>
