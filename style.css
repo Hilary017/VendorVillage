@@ -628,17 +628,15 @@ main ul img{
 
 
 .slides{
-	width: 90%;
+	width: 100%;
 	max-width: 350px;
-
-
 	height: 250px;
 	position: relative;
 	overflow: hidden;
 }
 .slides .list{
 	position: absolute;
-	width: 400px;
+	width: 200px;
 	height: 100%;
 	left: 0;
 	top: 0;
@@ -649,8 +647,8 @@ main ul img{
 .slides .list img{
 	width: 100%;
 	max-width: 100vw;
-	/* height: 350px; */
-	/* margin: 0 5rem; */
+	height: 350px;
+	margin: 0 -5rem;
 	object-fit: cover;
 }
 
@@ -778,8 +776,8 @@ main ul img{
 .slides .buttons{
     position: absolute;
     top: 45%;
-    left: 9%;
-    width: 90%;
+    left: 0%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -970,6 +968,7 @@ main ul img{
 	.discover-sect{
 		display: flex;
 		justify-content: center;
+		margin-top: 0;
 	}
 
 	.discover{
@@ -1039,7 +1038,7 @@ main ul img{
 	.slider .buttons{
 		position: absolute;
 		top: 45%;
-		left: 5%;
+		left: 8.3%;
 		width: 90%;
 		display: flex;
 		justify-content: space-between;
