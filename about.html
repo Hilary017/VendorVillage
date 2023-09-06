@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
     <script src="app.js" defer></script>
-    <script src="registervendor.js" defer></script>
+    <script src="vendors.js" defer></script>
 </head>
-<body>
+<body>   
     <header>
         <div class="top-header">
             <h1>
@@ -67,63 +67,55 @@
             </button>
         </nav>
     </header>
+    <main class="abouts--main">
+        <div>
+            <h1>Welcome to Vendor Village</h1>
+            <p>
+                Vendor Village is a technology driven online market hub where event 
+                vendors can display their portfolio in other to attract more clients and 
+                event organisers to patrionise their services. Currently, Our website can 
+                be used in 3 cities across Nigeria and guess what, we are expanding and 
+                we hope to extent these masterpiece to the other cities in Nigeria and 
+                Africa in general
+            </p>
+            <button>
+                <a href="registervendor.html" style="text-decoration: none; color: white;">
+                    Join as a vendor
+                </a>
+            </button>
+        </div>
+        <div>
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to revolutionize the way people  do business in  Africa. 
+                As technology is fast evolving, we want to make it convenient for 
+                Nigerians and Africans in diaspora to recruit and hire  credible, verifiable and professional vendors directly from Nigeria without the help of a middleman. no matter the plurality of the services they want, they can hire all the vendors needed all from one place.
 
-    <main>
-        <div class="card">
-            <div class="form-intro">
-                <img src="/images/vendor-village.png" alt="a fine woman">
-                <div>
-                    <h2 style="font-size: 30px;">Register with Vendor Village and</h2>
-                    <p>Get local jobs from both local and the international community, Grow your business.</p>
-                </div>
-            </div>
-            <form id="register-form">
-                <div>
-                    <label for="name">Business name/Full name <span style="color: red;">*</span></label> <br>
-                    <input type="text" name="name" id="name" />
-                </div>
-                <div>
-                    <label for="email">Email <span style="color: red;">*</span></label> <br>
-                    <input type="email" name="email" id="email" />
-                </div>
-                <div>
-                    <label for="phone">Phone Number <span style="color: red;">*</span></label> <br>
-                    <input type="number" min="1" name="number" id="phone" />
-                </div>
-                <div>
-                    <label for="services">which service are you providing <span style="color: red;">*</span></label>
-                    <select name="services" id="services">
-                        <option selected value="" disabled>Select Services</option>
-                        <option value="Photography">Photography</option>
-                        <option value="Fashion Design">Fashion Design</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="bio">Bio<span style="color: red;">*</span></label> <br>
-                    <textarea name="bio" id="bio" cols="50" rows="5"></textarea>
-                    <p style="font-size: 10px; color: red; margin-top: 0;">not more than 100 words</p>
-                </div>
-                <div>
-                    <label for="email">Profile picture</label> <br>
-                    <input type="file" name="file" id="file" />
-                </div>
-                <div>
-                    <label for="email">Portfolio images</label> <br>
-                    <input type="file" name="file" id="file" />
-                </div>
-                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                    <input type="checkbox" id="subcription" /> 
-                    <label for="email" style="font-size: 10px;">Yes, I'd like to receive email/SMS communications from Vendor Village.</label>
-                </div>
-                <div style="display: flex; align-items: center;">
-                    <input type="checkbox" id="terms" /> 
-                    <label for="email" style="font-size: 10px;">I accept <a href="#" style="color: blue;">terms and conditions</a>, <a href="#" style="color: blue;">privacy policy</a> and <a href="#" style="color: blue;">cookie policy</a></label>
-                </div>
-                <div>
-                    <button id="cancel-btn" style="background-color: rgb(94, 94, 95);">Cancel</button>
-                    <button>Submit</button>
-                </div>
-            </form>
+                Our goal is to support small businesses expand their horizon, 
+                help them increase sales, and in essence contribute to the GDP of the country.
+            </p>
+            <button>
+                <a href="vendors.html" style="text-decoration: none; color: white;">
+                    Connect with a vendor
+                </a>
+            </button>
+        </div>
+        <div>
+            <p>
+                Meet the facinating and ever revolutionary founder of this great platform. 
+                His name is Peter Oshodin, a computer science graduate currently 
+                completing his masters degree program in one of the top universities in
+                the United kingdom. Apart from his thriving carrer in IT, He was also a 
+                celebrity photographer and an award winning music composer.,
+                
+                Now you kmow where the inspiration for this project come from right? 
+            </p>
+            <img src="images/passport.png" alt="A passport of a woman" width="500" height="500">
+        </div>
+        <h2>Upcoming Services</h2>
+        <div>
+            <h2>Event Planning</h2>
+            <h2>Wedding Story Magazine</h2>  
         </div>
     </main>
     <footer id="contact">

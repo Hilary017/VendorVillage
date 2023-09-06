@@ -7,8 +7,6 @@ const bioInput = document.getElementById("bio");
 const termsCheckbox = document.getElementById("terms");
 const card = document.querySelector(".card");
 
-console.log(confirmBtn)
-
 
 const formSubmitHandler = () => {
     if(nameInput.value.trim() === "" || 
