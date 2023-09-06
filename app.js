@@ -5,87 +5,38 @@ const backdrop = document.querySelector("#backdrop");
 const registerModal = document.querySelector("#add-modal");
 
 const mobileNav = document.getElementById("mobile-nav");
-const firstToggle = toggleButton.querySelector("span");
-const secondToggle = toggleButton.children[1];
-const thirdToggle = toggleButton.children[2];
+// const firstToggle = toggleButton.querySelector("span");
+// const secondToggle = toggleButton.children[1];
+// const thirdToggle = toggleButton.children[2];
 const searchBar = document.querySelector(".search_field");
 const searchBtn = document.querySelector(".search-btn");
 
 const navBar = document.querySelector("nav");
 const searchIcon = document.querySelector("svg");
+const search = document.querySelector(".search-bar");
 const toggleBar = document.querySelector(".toggle-wrapper");
 const mobileSearchBar = document.querySelector(".mobile-search_bar");
 const searchField = mobileSearchBar.querySelector("input");
 
+
 const contactUs = document.getElementById("contact-us");
 
-console.log(contactUs);
+console.log(search);
 
 
-
-const vendorList = [
-    {
-        id: "a0",
-        businessName: "TG Bakery",
-        service: "Baking",
-        displayImage: "",
-        phoneNumber: "+2347056897834",
-        description: "",
-    },
-    {
-        id: "a1",
-        businessName: "Klala Photography and film",
-        service: "Photography",
-        displayImage: "",
-        phoneNumber: "+2347066897834",
-        description: "",
-    },
-    {
-        id: "a2",
-        businessName: "Moloti DJ services",
-        service: "DJ",
-        displayImage: "",
-        phoneNumber: "+2348056897834",
-        description: "",
-    },
-    {
-        id: "a3",
-        businessName: "TI Decoration",
-        service: "Decoration",
-        displayImage: "",
-        phoneNumber: "+2347036897834",
-        description: "",
-    },
-    {
-        id: "a4",
-        businessName: "Jide Events",
-        service: "Events Planning",
-        displayImage: "",
-        phoneNumber: "+2347066897834",
-        description: "",
-    },
-    {
-        id: "a5",
-        businessName: "Avil Stylist",
-        service: "Hair Dressing",
-        displayImage: "",
-        phoneNumber: "+2347036897834",
-        description: "",
-    },
-] 
 
 
 
 
 
 const appearSearchButton = () => {
-    toggleBar.classList.toggle("disappear");
     mobileSearchBar.classList.toggle("mobile-appear");
+    search.classList.toggle("disappear");
 }
 
 const disappearSearchButton = () => {
-    toggleBar.classList.toggle("disappear");
     mobileSearchBar.classList.toggle("mobile-appear");
+    search.classList.toggle("disappear");
 }
 
 const toggleNavbar = () => {
@@ -130,7 +81,7 @@ const filterMovieHandler = (value) => {
 
 
 
-toggleButton.addEventListener("click", toggleNavbar);
+// toggleButton.addEventListener("click", toggleNavbar);
 registerVendorButton.addEventListener("click", showRegistrationModal);
 // desktopRegisterVendorButton.addEventListener("click", showDesktopRegistrationModal);
 // backdrop.addEventListener("click", closeRegistrationModal);

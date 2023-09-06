@@ -12,82 +12,59 @@
 </head>
     <body>
         <header>
-            <nav>
-                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+            <div class="top-header">
+                <h1>
                     <a href="/" style="text-decoration: none;">
                         <img src="./images/vendor-village.png" alt="logo" style="width: 100px;">
                     </a>
-                    <div class="toggle-wrapper">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="20"         
-                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                        </svg>
-                        <button id="toggle-btn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                    <div class="mobile-search_bar">
-                        <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
-                        <button class="search-btn">
-                            <a href="vendors.html" style="text-decoration: none; color: white;">
-                                search
-                            </a>
-                        </button>
-                    </div>
+                </h1>
+                <div class="search-bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="20"         
+                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                    <label for="nav--toggle" class="nav--toggle-label">
+                        <span></span>
+                    </label>
                 </div>
-                
-                <div class="mobile-nav" id="mobile-nav">
-                    <ul>
-                        <li>
-                            <a href="/" style="text-decoration: none;">Home</a>
-                        </li>
-                        <li>
-                            <a href="/" style="text-decoration: none;">About</a>
-                        </li>
-                        <li>
-                            <a href="vendors.html" style="text-decoration: none;">Our Vendors</a>
-                        </li>
-                        <li>
-                            <a href="#contact" id="contact-us">Contact Us</a>
-                        </li>
-                    </ul>
-                    <button id="register">
-                        <a href="registervendor.html" style="text-decoration: none; color: white;">
-                            Join as a vendor
+                <div class="mobile-search_bar">
+                    <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
+                    <button class="search-btn">
+                        <a href="vendors.html" style="text-decoration: none; color: white;">
+                            search
                         </a>
                     </button>
                 </div>
-                <div class="desktop-nav">
-                    <div class="search_bar">
-                        <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
-                        <button class="search-btn">
-                            <a href="vendors.html" style="text-decoration: none; color: white;">
-                                search
-                            </a>
-                        </button>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="/" style="text-decoration: none;">Home</a>
-                        </li>
-                        <li>
-                            <a href="/" style="text-decoration: none;">About</a>
-                        </li>
-                        <li>
-                            <a href="vendors.html" style="text-decoration: none;">Our Vendors</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact Us</a>
-                        </li>
-                    </ul>
-                    <button id="register">
-                        <a href="registervendor.html" style="text-decoration: none; color: white;">
-                            Join as a vendor
+                <div class="search_bar">
+                    <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
+                    <button class="search-btn">
+                        <a href="vendors.html" style="text-decoration: none; color: white;">
+                            search
                         </a>
                     </button>
                 </div>
+            </div>        
+            <input type="checkbox" class="nav--toggle" id="nav--toggle">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/" style="text-decoration: none;">Home</a>
+                    </li>
+                    <li>
+                        <a href="/" style="text-decoration: none;">About</a>
+                    </li>
+                    <li>
+                        <a href="vendors.html" style="text-decoration: none;">Our Vendors</a>
+                    </li>
+                    <li>
+                        <a href="#contact" id="contact-us">Contact Us</a>
+                    </li>
+                </ul>
+                <button id="register">
+                    <a href="registervendor.html" style="text-decoration: none; color: white;">
+                        Join as a vendor
+                    </a>
+                </button>
             </nav>
         </header>
         <main class="main--profile">
