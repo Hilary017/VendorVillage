@@ -30,7 +30,7 @@
             <div class="mobile-search_bar">
                 <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
                 <button class="search-btn">
-                    <a href="vendors.html" style="text-decoration: none; color: white;">
+                    <a href="search.html" style="text-decoration: none; color: white;">
                         search
                     </a>
                 </button>
@@ -38,7 +38,7 @@
             <div class="search_bar">
                 <input type="text" class="search_field" id="search-bar" placeholder="search for vendor here..." />
                 <button class="search-btn">
-                    <a href="vendors.html" style="text-decoration: none; color: white;">
+                    <a href="search.html" style="text-decoration: none; color: white;">
                         search
                     </a>
                 </button>
@@ -59,15 +59,14 @@
                 <li>
                     <a href="#contact" id="contact-us">Contact Us</a>
                 </li>
-            </ul>
-            <button id="register">
-                <a href="registervendor.html" style="text-decoration: none; color: white;">
-                    Join as a vendor
-                </a>
-            </button>
+                <li>
+                    <a href="registervendor.html" class="btn-link">
+                        Join as a vendor
+                    </a>
+                </li>
+            </ul>  
         </nav>
     </header>
-
     <main>
         <div class="card">
             <div class="form-intro">
@@ -89,13 +88,20 @@
                 <div>
                     <label for="phone">Phone Number <span style="color: red;">*</span></label> <br>
                     <input type="number" min="1" name="number" id="phone" />
+                    <p style="font-size: 10px; color: red; margin-top: 0;">phone number should be 11 digits</p>
                 </div>
                 <div>
                     <label for="services">which service are you providing <span style="color: red;">*</span></label>
                     <select name="services" id="services">
                         <option selected value="" disabled>Select Services</option>
                         <option value="Photography">Photography</option>
-                        <option value="Fashion Design">Fashion Design</option>
+                        <option value="Decoration">Decoration</option>
+                        <option value="Cake Design">Cake Design</option>
+                        <option value="Venue">Venue</option>
+                        <option value="Makeup Art">Makeup Art</option>
+                        <option value="Bridal Gown">Bridal Gown</option>
+                        <option value="Hair dressing">Hair dressing</option>
+                        <option value="DJ">DJ</option>
                     </select>
                 </div>
                 <div>
@@ -120,7 +126,7 @@
                     <label for="email" style="font-size: 10px;">I accept <a href="#" style="color: blue;">terms and conditions</a>, <a href="#" style="color: blue;">privacy policy</a> and <a href="#" style="color: blue;">cookie policy</a></label>
                 </div>
                 <div>
-                    <button id="cancel-btn" style="background-color: rgb(94, 94, 95);">Cancel</button>
+                    <button id="cancel-btn">Cancel</button>
                     <button>Submit</button>
                 </div>
             </form>
