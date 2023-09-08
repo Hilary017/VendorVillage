@@ -182,11 +182,8 @@ button{
 .service--images{
 	max-width: 1240px;
 	margin: 0 auto;
-	padding: 0 10px;
-
 	display: flex;
 	flex-direction: column;
-	/* grid-gap: 5px; */
 	align-items: center;
 	justify-content: center;
 }
@@ -194,11 +191,9 @@ button{
 .service--images div{
 	display: flex;
 	flex-direction: column;
-	/* grid-gap: 5px; */
 	align-items: center;
 	justify-content: center;
 	width: 80%;
-	
 }
 
 .service--images img{
@@ -1358,7 +1353,7 @@ iframe{
 	.service--images{
 		max-width: 1240px;
 		margin: 0 auto;
-		padding: 0 10px;
+		padding-left: 50px;
 		display: block;
 	}
 
