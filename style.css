@@ -179,6 +179,33 @@ button{
 	margin: 2rem 5rem;
 } */
 
+.service--images{
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 10px;
+
+	display: flex;
+	flex-direction: column;
+	/* grid-gap: 5px; */
+	align-items: center;
+	justify-content: center;
+}
+
+.service--images div{
+	display: flex;
+	flex-direction: column;
+	/* grid-gap: 5px; */
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	
+}
+
+.service--images img{
+	width: 200px;
+	height: 150px;
+}
+
 .easy-service{
 	display: flex;
 	flex-direction: column;
@@ -594,13 +621,6 @@ main ul img{
 
 .mobile-appear{
     display: flex;
-}
-
-.service-images{
-    /* display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-gap: 5px;
-    margin: 4rem 0; */
 }
 
 .service-images img{
@@ -1258,7 +1278,6 @@ iframe{
 
 	.popular-vendors{
         margin-top: 64px;
-        /* background-color: red; */
         width: 90%;
         max-width: 1240px;
         margin: 2rem auto;
@@ -1270,13 +1289,9 @@ iframe{
         grid-gap: 20px;
         justify-content: center;
         align-items: center;
-        /* background-color: red; */
-        /* max-width: 940px; */
-        /* margin: 0 auto; */
     }
 
     .profile-sect .vendor-profile{
-        /* width: 40px; */
         position: relative;
     }
 
@@ -1320,10 +1335,8 @@ iframe{
     }
 
 	.search_bar{
-        /* position: relative; */
         display: flex;
         gap: 5px;
-        /* width: 80%; */
         width: 400px;
         margin: 0rem;
         padding: 2rem auto;
@@ -1343,20 +1356,23 @@ iframe{
     }
 
 	.service--images{
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-gap: 10px;
-        /* margin: 4rem 0; */
-		width: 80%;
 		max-width: 1240px;
 		margin: 0 auto;
-		/* background-color: red; */
+		padding: 0 10px;
+		display: block;
+	}
 
+	.service--images div{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        /* grid-gap: 5px; */
+		width: 80%;
+		
     }
 
     .service--images img{
-        /* width: 100%; 
-        height: 200px; */
+        width: 100%; 
+        height: 200px;
     }
 
 	.week-event{
