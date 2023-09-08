@@ -151,15 +151,14 @@ button{
 
 .our-platform ul{
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 10px;
 	justify-content: start;
 	align-items: center;
-	margin-bottom: 5rem; 
+	margin-bottom: 1rem; 
 	margin-top: 1rem;
-	max-width: 700px;
-	text-align: center;
-	margin: 0;
+	/* max-width: 700px; */
+	/* text-align: center; */
+	/* margin: 0; */
 }
 
 .our-platform ul li{
@@ -167,18 +166,18 @@ button{
 	border: none;
 	color: white;
 	padding: 10px;
-	/* width: 500px; */
-	/* height: 500px; */
 	margin: 0;
 	margin-left: -2rem;
 	text-align: center;
+	background-color: #0A86F8;
+	width: 200px;
 }
-
+/* 
 .our-platform ul li img{
 	width: 200px;
 	height: 200px;
 	margin: 2rem 5rem;
-}
+} */
 
 .easy-service{
 	display: flex;
@@ -790,7 +789,7 @@ main ul img{
 	padding-top: 3rem;
 }
 
-.abouts--main div:nth-child(4) img{
+.abouts--main div:nth-child(3) img{
 	width: 80%;
 	height: 200px;
 	margin: auto;
@@ -1046,6 +1045,16 @@ iframe{
 		float: right;
 		width: 80%;
 		height: 250px;
+	}
+
+	.our-platform ul{
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-gap: 40px;
+		justify-content: start;
+		align-items: center;
+		margin-bottom: 1rem; 
+		margin-top: 1rem;
 	}
 
 	.easy-service{
@@ -1443,11 +1452,11 @@ iframe{
 		padding-top: 3rem;
 	}
 
-	.abouts--main div:nth-child(4) p{
+	.abouts--main div:nth-child(3) p{
 		width: 50%;
 	}
 
-	.abouts--main div:nth-child(4) img{
+	.abouts--main div:nth-child(3) img{
 		width: 400px;
 		height: 250px;
 	}
